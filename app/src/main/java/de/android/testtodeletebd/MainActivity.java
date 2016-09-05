@@ -77,6 +77,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Log.d(TAG, "--- Clear ---");
                 int clearCount = db.delete("mytable", null, null);
                 Log.d(TAG, "deleted row count = " + clearCount);
+                db.execSQL("UPDATE sqlite_sequence SET seq = 0 WHERE name= 'mytable'");
+//                db.execSQL("delete from sqlite_sequence where name= \'mytable\'");
                 break;
         }
         db.close();
