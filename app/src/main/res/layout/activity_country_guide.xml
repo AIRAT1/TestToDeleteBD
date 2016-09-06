@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,6 +8,111 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="de.android.testtodeletebd.CountryGuideActivity">
-
-</RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Справочник стран"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"/>
+    <Button
+        android:id="@+id/btnAll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Все записи"
+        android:layout_marginTop="5dp"/>
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+        <Button
+            android:id="@+id/btnFunc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Функция"/>
+        <EditText
+            android:id="@+id/etFunc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+            <requestFocus/>
+        </EditText>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+        <Button
+            android:id="@+id/btnPeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Население"/>
+        <EditText
+            android:id="@+id/etPeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Население по региону"
+        android:layout_marginTop="5dp"/>
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+        <Button
+            android:id="@+id/btnHaving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Население по региону >"/>
+        <EditText
+            android:id="@+id/etRegionPeople"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:inputType="number"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+        <Button
+            android:id="@+id/btnSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Сортировка"/>
+        <RadioGroup
+            android:id="@+id/rgSort"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/rName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="Наименование"/>
+            <RadioButton
+                android:id="@+id/rPeople"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Население"/>
+            <RadioButton
+                android:id="@+id/rRegion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Регион"/>
+        </RadioGroup>
+    </LinearLayout>
+</LinearLayout>
